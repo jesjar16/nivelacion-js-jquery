@@ -13,13 +13,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         function printNews(){
-         // $('#news p').append('NUEVAS RECETAS');
           $('div.callout-news p').append('NUEVAS RECETAS');
         }
 
         $(document).ready(function(){
             
-          console.log('Cargó el jquery');
           $('.js-back').hide();
 
           printNews();
