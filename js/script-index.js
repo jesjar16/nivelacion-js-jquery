@@ -69,7 +69,26 @@ function renderActivities(activitiesArray) {
 */
 function renderActivity(recipe) {
 
-	
+	console.log('Entró a render activity', recipe.image);
+	var html_str= "";
+
+	html_str+= "<a href='#' class='item-activity'>";
+	html_str+= "<span class='attribution'>";
+	html_str+= "<span class='avatar'>";
+	html_str+= "<img src='" + recipe.image +"' class='image-avatar'>";
+	html_str+= "</span>";
+	html_str+= "<span class='meta'>";
+	html_str+= "<span class='author'>" + recipe.userName + "</span> made "; 
+	html_str+= "<span class='recipe'>" + recipe.recipeName + "</span>: " + recipe.text;
+	html_str+= "<span class='location'>"+ recipe.place +"</span>";
+	html_str+= "</span></span>";
+	html_str+= "<div class='bg-image' ";
+	html_str+= "style='background-image: url(" + recipe.image + ");'>";
+	html_str+= "</div></a>";
+
+	console.log(html_str);
+
+	$('.wrapper-message').before(html_str);
 }
 
 
