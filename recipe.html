@@ -85,7 +85,13 @@
     <script>
       $(document).ready(function(){
         console.log('Documento HTML listo');
+        
         $('.js-menu').hide();
+
+        $('.js-back').on("click", function(){
+          console.log('Se hace click en flecha hacia atrás');
+          $('.js-back').attr('href','index.html');
+        });
 
         $('.js-show-recipe').on("click", function(){
           console.log('Click en Recipe');
