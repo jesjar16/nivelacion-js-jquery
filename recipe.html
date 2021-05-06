@@ -86,6 +86,17 @@
       $(document).ready(function(){
         console.log('Documento HTML listo');
         $('.js-menu').hide();
+
+        $('.js-show-recipe').on("click", function(){
+          console.log('Click en Recipe');
+          $('.page').removeClass('make');
+        });
+
+        $('.js-show-make').on("click", function(){
+          console.log('Click en Make');
+          $('.page').addClass('make');
+        });
+
       });
     </script>
   </body>
